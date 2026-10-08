@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manasa Joshi | Project</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html">Manasa Joshi</a>
+    
+    <nav>
+      <a href="index.html">Home</a><a href="resume.html">Resume</a><a href="biodata.html">Bio-data</a><a class="active"
+        href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <div class="page-head">
+      <div>
+        <div class="eyebrow">MODULE / 04</div>
+        <h1>Projects<span class="dot">.</span></h1>
+        <p>Things I've built, explored or want to build next.</p>
+      </div>
+    </div>
+    
+    <div class="project-grid">
+      <article class="project-card" data-category="ai">
+        <div class="project-number">01</div>
+        <h2>Lila AI</h2>
+        <p>Travel recommendation assistant using retrieval, embeddings, weather data and location-aware suggestions.</p>
+        <div class="chips"><span>Python</span><span>FastAPI</span><span>RAG</span></div><a href="#"
+          class="project-link">View concept →</a>
+      </article>
+      <article class="project-card" data-category="web">
+        <div class="project-number">02</div>
+        <h2>Finova</h2>
+        <p>Banking application concept with authentication, KYC workflow, transactions and admin dashboard.</p>
+        <div class="chips"><span>Flask</span><span>SQL</span><span>Auth</span></div><a href="#"
+          class="project-link">View concept →</a>
+      </article>
+      
+      <article class="project-card" data-category="java">
+        <div class="project-number">04</div>
+        <h2>DSA Practice Engine</h2>
+        <p>A simple Java-based playground for visualising arrays, stacks, queues and common algorithm patterns.</p>
+        <div class="chips"><span>Java</span><span>DSA</span></div><a href="#" class="project-link">View concept →</a>
+      </article>
+    </div>
+
+    <section class="contact-panel">
+      <div>
+        <div class="eyebrow">LET'S CONNECT</div>
+        <h2>Have an idea?  Lets Connect</h2>
+        
+      </div>
+      <div class="socials"><a href="#">GitHub ↗</a><a href="#">LinkedIn ↗</a><a href="mailto:yourmail@example.com">Email
+          ↗</a></div>
+    </section>
+  </main>
+  <footer><span>© 2026 Manasa Joshi</span></footer>
+  <script src="js/script.js"></script>
+  <script>
+    $(".filter").on("click", function () {
+      $(".filter").removeClass("active"); $(this).addClass("active");
+      const f = $(this).data("filter");
+      $(".project-card").each(function () { const show = f === "all" || $(this).data("category") === f; $(this).stop(true, true)[show ? "fadeIn" : "fadeOut"](220); });
+    });
+  </script>
+</body>
+
+</html>
